@@ -20,7 +20,7 @@ If you like this plugin, give this plugin a Like or Make donation with PayPal: h
 # Documentation
 
 #### Installation
-To install this plugin you have to click on __add to project__ or need to type __aldea.backendmaps__ in Backend *System > updates > intall plugin*
+To install this plugin you have to click on __add to project__ or need to type __norotaro.backendmaps__ in Backend *System > updates > intall plugin*
 
 #### Configuration
 To configure this Plugin goto Backend *System* then find *MISC* in left side bar, then click on *Backend Google Maps* , you will get Configuration options (refer screenshots)
