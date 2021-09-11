@@ -1,9 +1,10 @@
-<?php namespace Aldea\BackendMaps\FormWidgets;
+<?php
+
+namespace Norotaro\BackendMaps\FormWidgets;
 
 use Html;
 use Backend\Classes\FormWidgetBase;
-
-use Aldea\BackendMaps\Models\Settings;
+use Norotaro\BackendMaps\Models\Settings;
 
 /**
  * Backend Google Maps
@@ -80,14 +81,14 @@ class BackendMaps extends FormWidgetBase
     {
         $settingsInstance = Settings::instance();
 
-        if(isset($settingsInstance->attributes['address_map'])){
-          $latLong = explode(',', $settingsInstance->attributes['address_map']);
+        if (isset($settingsInstance->attributes['address_map'])) {
+            $latLong = explode(',', $settingsInstance->attributes['address_map']);
         }
 
-        if(isset($settingsInstance->attributes['address_map_key'])){
-          $this->apiKey = $settingsInstance->attributes['address_map_key'] ?? '';
-          $this->latitude = $latLong[0] ?? '37.386051';
-          $this->longitude = $latLong[1] ?? '-122.083855';
+        if (isset($settingsInstance->attributes['address_map_key'])) {
+            $this->apiKey = $settingsInstance->attributes['address_map_key'] ?? '';
+            $this->latitude = $latLong[0] ?? '37.386051';
+            $this->longitude = $latLong[1] ?? '-122.083855';
         }
     }
 }

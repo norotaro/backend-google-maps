@@ -1,8 +1,8 @@
-<?php namespace Aldea\BackendMaps;
+<?php
+
+namespace Norotaro\BackendMaps;
 
 use System\Classes\PluginBase;
-use System\Classes\PluginManager;
-use System\Classes\SettingsManager;
 
 /**
  * Backend Google Maps Plugin Information File
@@ -17,9 +17,9 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name'        => 'aldea.backendmaps::lang.plugin.name',
-            'description' => 'aldea.backendmaps::lang.plugin.description',
-            'author'      => 'Aldea',
+            'name'        => 'norotaro.backendmaps::lang.plugin.name',
+            'description' => 'norotaro.backendmaps::lang.plugin.description',
+            'author'      => 'Norotaro',
             'icon'        => 'icon-search'
         ];
     }
@@ -28,11 +28,11 @@ class Plugin extends PluginBase
     {
         return [
             'settings' => [
-                'label'       => 'aldea.backendmaps::lang.settings.label',
-                'description' => 'aldea.backendmaps::lang.settings.description',
-                'permissions' => ['aldea.backendmaps.manage'],
+                'label'       => 'norotaro.backendmaps::lang.settings.label',
+                'description' => 'norotaro.backendmaps::lang.settings.description',
+                'permissions' => ['norotaro.backendmaps.manage'],
                 'icon'        => 'icon-map-marker',
-                'class'       => 'Aldea\backendmaps\Models\Settings',
+                'class'       => Models\Settings::class,
                 'order'       => 602
             ]
         ];
@@ -41,9 +41,9 @@ class Plugin extends PluginBase
     public function registerPermissions()
     {
         return [
-            'aldea.backendmaps.manage' => [
-                'label' => 'aldea.backendmaps::lang.permissions.label',
-                'tab' => 'aldea.backendmaps::lang.permissions.tab'
+            'norotaro.backendmaps.manage' => [
+                'label' => 'norotaro.backendmaps::lang.permissions.label',
+                'tab' => 'norotaro.backendmaps::lang.permissions.tab'
             ]
         ];
     }
@@ -51,15 +51,15 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-            'Aldea\BackendMaps\Components\gMap' => 'gmap'
+            Components\Map::class => 'gmap'
         ];
     }
 
     public function registerFormWidgets()
     {
         return [
-            'Aldea\BackendMaps\FormWidgets\BackendMaps' => [
-                'label' => 'aldea.backendmaps::lang.widget.name',
+            FormWidgets\BackendMaps::class => [
+                'label' => 'norotaro.backendmaps::lang.widget.name',
                 'code'  => 'backendmaps'
             ]
         ];

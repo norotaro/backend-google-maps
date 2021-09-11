@@ -1,36 +1,45 @@
-Backend Google Maps
-=============
+# Backend Google Maps
 
 ### Easily and quickly integrate a Google Maps field into your Backend Forms.
 
 This plugin provides a Form Widget to integrate a Google Maps map to a Backend Form in a simple and fast way. Additionally, there is a component to display the map in the frontend of the website.
 
-Requirements:
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Features](#features)
+- [Usage](#usage)
+    - [Backend forms](#backend-forms)
+    - [Frontend](#frontend)
+- [Support](#support)
+- [License](#license)
+
+## Requirements
 * Get the Google Maps KEY API. For more information, visit the following link: https://developers.google.com/maps/documentation/javascript/get-api-key?hl=EN
 
-#### Features
+## Installation
+First install the plugin with composer:
+```sh
+composer require norotaro/wn-backendmaps-plugin
+```
+
+Then run the migration files with:
+
+```sh
+php artisan winter:up
+```
+
+## Features
 * Integrate a Google Maps map into your Backend Forms.
 * Display the map in the frontend of the website.
 
-*If you want to help adding features, any contribution in the official Github repository will be of great help.*
+## Configuration
+To configure this Plugin goto Backend *System* then find *MISC* in left side bar, then click on *Backend Google Maps* , you will get Configuration options.
 
-#### Like this plugin?
-If you like this plugin, give this plugin a Like or Make donation with PayPal: https://www.paypal.me/adc91
+## Usage
 
-# Documentation
-
-#### Installation
-To install this plugin you have to click on __add to project__ or need to type __aldea.backendmaps__ in Backend *System > updates > intall plugin*
-
-#### Configuration
-To configure this Plugin goto Backend *System* then find *MISC* in left side bar, then click on *Backend Google Maps* , you will get Configuration options (refer screenshots)
-
-#### Usage
-
-##### On the Backend Forms
+### Backend Forms
 Create a field type backendmaps in the fields.yaml file of the model where you want to store the latitude and longitude of a Google Maps location.
 
-###### Example:
 ```yaml
 map:
     label: 'Google Maps'
@@ -39,7 +48,7 @@ map:
     type: backendmaps
 ```
 
-##### On the Frontend
+### Frontend
 ```yaml
 [gmap]
 width = "500%"
@@ -51,3 +60,11 @@ animateMarker = 1
 ==
 {% component 'gmap' %}
 ```
+
+## Suport
+
+- [Issue Tracker](https://github.com/norotaro/wn-backendmaps-plugin/issues/)
+
+## License
+
+BackendMaps for WinterCMS is licensed under the [Apache License](LICENSE).
