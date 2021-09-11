@@ -1,0 +1,28 @@
+{
+    "name": "norotaro/wn-backendmaps-plugin",
+    "desciption": "Easily and quickly integrate a Google Maps field into your Backend Forms",
+    "type": "winter-plugin",
+    "keywords": [
+        "winter",
+        "wintercms",
+        "winter-plugin",
+        "plugin",
+        "backendmaps",
+        "google-maps"
+    ],
+    "homepage": "https://github.com/norotaro/wn-backendmaps-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nelson Otazo",
+            "email": "nelsonotazo+dev@gmail.com",
+            "homepage": "https://nelson.otazo.com.py",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "nelsonotazo+support@gmail.com",
+        "issues": "https://github.com/norotaro/wn-backendmaps-plugin/issues",
+        "source": "https://github.com/norotaro/wn-backendmaps-plugin"
+    }
+}
