@@ -32,7 +32,7 @@ class Plugin extends PluginBase
                 'description' => 'norotaro.backendmaps::lang.settings.description',
                 'permissions' => ['norotaro.backendmaps.manage'],
                 'icon'        => 'icon-map-marker',
-                'class'       => 'Norotaro\backendmaps\Models\Settings',
+                'class'       => Models\Settings::class,
                 'order'       => 602
             ]
         ];
@@ -51,14 +51,14 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-            'Norotaro\BackendMaps\Components\gMap' => 'gmap'
+            Components\Map::class => 'gmap'
         ];
     }
 
     public function registerFormWidgets()
     {
         return [
-            'Norotaro\BackendMaps\FormWidgets\BackendMaps' => [
+            FormWidgets\BackendMaps::class => [
                 'label' => 'norotaro.backendmaps::lang.widget.name',
                 'code'  => 'backendmaps'
             ]

@@ -3,11 +3,10 @@
 namespace Norotaro\BackendMaps\Components;
 
 use Cms\Classes\ComponentBase;
-use Cms\Classes\CodeBase;
 
 use Norotaro\BackendMaps\Models\Settings;
 
-class gMap extends ComponentBase
+class Map extends ComponentBase
 {
     public $longitude;
     public $latitude;

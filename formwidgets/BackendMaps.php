@@ -4,7 +4,6 @@ namespace Norotaro\BackendMaps\FormWidgets;
 
 use Html;
 use Backend\Classes\FormWidgetBase;
-
 use Norotaro\BackendMaps\Models\Settings;
 
 /**
