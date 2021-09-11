@@ -3,8 +3,6 @@
 namespace Norotaro\BackendMaps;
 
 use System\Classes\PluginBase;
-use System\Classes\PluginManager;
-use System\Classes\SettingsManager;
 
 /**
  * Backend Google Maps Plugin Information File
